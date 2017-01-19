@@ -6,8 +6,8 @@ group :integration do
   cookbook 'apt'
   cookbook 'java'
   cookbook 'confluence_test', path: 'test/fixtures/cookbooks/confluence_test'
-
-  # Lock 'postgresql' version due to the issue of derived attributes
-  # https://github.com/hw-cookbooks/postgresql/issues/302
-  cookbook 'postgresql', '= 3.4.16'
 end
+
+# Temporary lock. Remove it when this PR is merged and released:
+# https://github.com/sous-chefs/postgresql/pull/396
+cookbook 'postgresql', '= 5.1.0'

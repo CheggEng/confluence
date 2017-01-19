@@ -11,7 +11,7 @@ Installs/Configures an instance of [Atlassian Confluence](https://www.atlassian.
 ### Platforms
 
 * RHEL/CentOS 6, 7
-* Ubuntu 12.04, 14.04
+* Ubuntu 14.04, 16.04
 
 ### Cookbooks
 
@@ -49,7 +49,7 @@ install_path | location to install Confluence | String | /opt/atlassian/confluen
 install_type | Confluence install type - "installer", "standalone" | String | installer
 url | URL for Confluence install | String | auto-detected by library method
 user | user running Confluence | String | confluence
-version | Confluence version to install | String | 5.10.3
+version | Confluence version to install | String | 6.0.3
 
 **Notice:** If `['confluence']['install_type']` is set to `installer`, then the installer will try to upgrade your Confluence instance located in `['confluence']['install_path']` (if it exists) to the `['confluence']['version']`.
 
@@ -118,7 +118,7 @@ Example:
       "type": "postgresql",
       "name": "confluence_db",
       "user": "confluence_user",
-      "password": "confluence_db_password",
+      "password": "confluence_db_password"
     }
   }
 }
